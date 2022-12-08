@@ -12,8 +12,8 @@ const sortArray = function(array) {
     if (a > b) return 1;
     if (a < b) return -1;
     return 0;
-  })
-}
+  });
+};
 
 // sort timerNumArray
 sortArray(timerNumArray);
@@ -23,12 +23,13 @@ sortArray(timerNumArray);
 const soundAlarm = function(array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 0) {
-      timer = array[i];
+      let timer = array[i];
       setTimeout(() => {
         process.stdout.write('\x07');
       }, timer * 1000);
     }
   }
-}
+};
+
 soundAlarm(timerNumArray);
 
